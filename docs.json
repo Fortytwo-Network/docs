@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "maple",
   "name": "Fortytwo",
   "colors": {
     "primary": "#2d2dff",
@@ -19,7 +19,7 @@
     "default": "dark"
   },
   "background": {
-    "decoration": "gradient"
+    "decoration": "windows"
   },
   "fonts": {
     "heading": {
