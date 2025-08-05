@@ -1,0 +1,239 @@
+---
+title: "Quick Start"
+---
+
+## Join the "Hitchhiking to AGI" Program
+
+Submit an application to join the first wave of node operators on Fortytwo: [Application Form](https://tally.so/r/wQzVQk)
+<Warning>
+  **Please ensure you have received an acceptance confirmation email before attempting to install the node.**
+</Warning>
+
+<Danger>
+  **A unique activation code is required for each device on which the node is installed.**
+</Danger>
+
+## Installation
+
+### System Requirements
+
+Before installing a Fortytwo node, verify that your device meets the following [minimum requirements](doc:hardware-requirements).
+
+### Installing Fortytwo Node
+
+<Tabs>
+  <Tab title="macOS">
+    <Steps>
+      <Step>
+       Open **Terminal**.
+      </Step>
+      <Step>
+        Navigate to your preferred installation directory, or run the following command to continue installation in the default location (your home directory):
+      </Step>
+      <CodeGroup>
+        ```bash Zsh
+        mkdir -p ~/Fortytwo && cd ~/Fortytwo
+        ```
+      </CodeGroup>
+      <Step>
+        Run the following commands to download the node package, extract it, and execute the installation script:
+      <CodeGroup>
+        ```bash Zsh
+          curl -L -o fortytwo-console-app.zip https://github.com/Fortytwo-Network/fortytwo-console-app/archive/refs/heads/main.zip
+          unzip fortytwo-console-app.zip -d . && rm fortytwo-console-app.zip
+          cd fortytwo-console-app-main
+          chmod +x macos.sh && ./macos.sh
+          ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Follow the on-screen instructions in the script to complete the setup.
+      </Step>
+      <Step>
+        The node will start automatically.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Windows">
+    <Steps>
+      <Step>
+        Open **PowerShell as Administrator**.
+      </Step>
+      <Step>
+        Navigate to your preferred installation directory, or run the following command to continue installation in the default location (your home directory):
+
+        ```bash PowerShell
+        New-Item -Path "$HOME\Fortytwo" -ItemType Directory -Force; Set-Location "$HOME\Fortytwo"
+        ```
+      </Step>
+      <Step>
+        Run the following commands to download the node package, extract it, and execute the installation script with a temporary execution policy override:
+        <CodeGroup>
+        ```bash PowerShell
+        Invoke-WebRequest -Uri "https://github.com/Fortytwo-Network/fortytwo-console-app/archive/refs/heads/main.zip" -OutFile "fortytwo-console-app.zip"
+        Expand-Archive -Path fortytwo-console-app.zip -DestinationPath . -Force; Remove-Item -Path fortytwo-console-app.zip
+        cd fortytwo-console-app-main
+        Unblock-File -Path .\windows.ps1
+        powershell -ExecutionPolicy Bypass -File .\windows.ps1
+        ```
+        </CodeGroup>
+      </Step>
+      <Step>
+        Follow the on-screen instructions to complete the setup.
+      </Step>
+      <Step>
+        The node will start automatically.
+      </Step>
+</Steps>
+  </Tab>
+  <Tab title="Linux (Ubuntu/Debian)">
+    <Steps>
+      <Step>
+        Open **Terminal**.
+      </Step>
+      <Step>
+        Navigate to your preferred installation directory, or run the following command to continue installation in the default location (your home directory):
+      <CodeGroup>
+        ```bash Bash
+        mkdir -p ~/Fortytwo && cd ~/Fortytwo
+        ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Run the following commands to download the node package, extract it, and execute the installation script:
+      <CodeGroup>
+        ```bash Bash
+        curl -L -o fortytwo-console-app.zip https://github.com/Fortytwo-Network/fortytwo-console-app/archive/refs/heads/main.zip
+        unzip fortytwo-console-app.zip
+        cd fortytwo-console-app-main
+        chmod +x linux.sh && ./linux.sh
+        ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Follow the on-screen instructions to complete the setup.
+      </Step>
+      <Step>
+        The node will start automatically.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+
+
+### Operating Your Node
+
+The node will remain fully operational until it is terminated by the user or the system restarts. You can minimize the terminal window or switch to other applications – the node will continue running in the background.
+
+### Updating Your Node
+
+The Fortytwo node app automatically updates every time it is launched. When you start the node, the app checks for the latest available version and installs any updates before running.
+
+### Stopping Your Node
+
+Press **Ctrl+C** in the terminal window to terminate the node process.
+
+### Restarting Fortytwo Node
+
+<Tabs>
+  <Tab title="macOS">
+    <Steps>
+      <Step>
+        Open **Terminal**.
+      </Step>
+      <Step>
+        Navigate to the directory where the node is installed using the **cd** command. If the node was installed in the default location, run:
+      <CodeGroup>
+        ```bash Zsh
+        cd ~/Fortytwo/fortytwo-console-app-main
+        ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Run the node startup script:
+      <CodeGroup>
+        ```bash Zsh
+        ./macos.sh
+        ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Follow the on-screen instructions.
+      </Step>
+      <Step>
+        The node will start automatically.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Windows">
+    <Steps>
+      <Step>
+        Open **PowerShell as Administrator**.
+      </Step>
+      <Step>
+        Navigate to the directory where the node is installed using the **cd** command. If the node was installed in the default location, run:
+      <CodeGroup>
+        ```bash PowerShell
+        Set-Location "$HOME\Fortytwo\fortytwo-console-app-main"
+        ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Run the node startup script:
+      <CodeGroup>
+        ```bash PowerShell
+        powershell -ExecutionPolicy Bypass -File .\windows.ps1
+        ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Follow the on-screen instructions.
+      </Step>
+      <Step>
+        The node will start automatically.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Linux (Ubuntu/Debian)">
+    <Steps>
+      <Step>
+        Open **Terminal**.
+      </Step>
+      <Step>
+        Navigate to the directory where the node is installed using the cd command. If the node was installed in the default location, run:
+      <CodeGroup>
+        ```bash Bash
+        cd ~/Fortytwo/fortytwo-console-app-main
+        ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Run the node startup script:
+      <CodeGroup>
+        ```bash Bash
+        ./linux.sh
+        ```
+      </CodeGroup>
+      </Step>
+      <Step>
+        Follow the on-screen instructions.
+      </Step>
+      <Step>
+        The node will start automatically.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+### Help and Support
+
+For any questions or issues, you can access the tech support channel on the official [Fortytwo Discord server](https://discord.gg/fortytwo).
+
+### Performance Considerations
+
+Currently, the node app does not support full load balancing. It is recommended to stop the node app (by closing the terminal) before running resource-intensive applications (e.g., 3D games, video editing, or graphics software) to prevent performance issues.
+
+This does not apply to nodes running on dedicated machines, where the node app runs independently without impacting other tasks.
+
+Future versions will include load balancing, allowing nodes to run alongside other resource-intensive applications without noticeable performance impact.

@@ -1,0 +1,37 @@
+---
+title: "Changelog"
+---
+
+<Update label="2025-07-16" description="[CAPSULE:0.1.34]" tags={["Improved"]}>
+*Improved offline support and startup observability for capsule workers.*
+
+### Added
+- Offline mode support for using locally cached models.
+- Notification system to confirm successful worker initialization before warm-up.
+
+### Changed
+- Adjusted worker initialization sequence for improved launch stability.
+
+</Update>
+
+<Update label="2025-07-16" description="[PROTOCOL:0.9.0]" tags={["Improved"]}>
+
+*Improved chain sync robustness and streamlined network module logic.*
+
+### Added
+
+- Async block gap processing to detect and fill missing blockchain data automatically.
+- Minor stability improvements for consensus submissions.
+
+### Changed
+
+- Removed relay-specific logic from the network module to simplify architecture.
+</Update>
+
+<Update label="2025-07-10" description="[PROTOCOL:0.8.4]" tags={["Fixed"]}>
+
+### Fixed
+
+- Corrected label assignments in the inference metrics output.
+</Update>
+

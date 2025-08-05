@@ -1,68 +1,112 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Fortytwo",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2d2dff",
+    "light": "#2d2dff",
+    "dark": "#2d2dff"
   },
-  "favicon": "/favicon.svg",
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "claude",
+      "chatgpt"
+    ]
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "background": {
+    "decoration": "gradient"
+  },
+  "fonts": {
+    "heading": {
+      "family": "hafferFont",
+      "source": "https://fortytwo.network/_next/static/media/fddc3387c0d958c2-s.p.woff2",
+      "format": "woff2"
+    }
+  },
+  "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
+    "versions": [
       {
-        "tab": "Guides",
-        "groups": [
+        "version": "v1.1",
+        "tabs": [
           {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                 "docs/introduction"
+                ]
+              },
+              {
+                "group": "Devnet",
+                "pages": [
+                  "docs/participation"
+                ]
+              },
+              {
+                "group": "Node",
+                "pages": [
+                  "docs/quick-start",
+                  "docs/hardware-requirements",
+                  "docs/wallet-migration"
+                ]
+              }
             ]
           },
           {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+            "tab": "Changelog",
+            "groups": [
+              {
+                "group": " ",
+                "pages": [
+                  "changelog"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
+        "version": "v1.0",
+        "tabs": [
           {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "v1.0/docs/introduction"
+                ]
+              },
+              {
+                "group": "Devnet",
+                "pages": [
+                  "v1.0/docs/participation"
+                ]
+              },
+              {
+                "group": "Research",
+                "pages": [
+                  "v1.0/docs/papers"
+                ]
+              }
             ]
           },
           {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+            "tab": "Changelog",
+            "groups": [
+              {
+                "group": " ",
+                "pages": [
+                  "v1.0/docs/changelog"
+                ]
+              }
             ]
           }
         ]
@@ -71,18 +115,18 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Careers",
+          "href": "https://jobs.ashbyhq.com/fortytwo",
+          "icon": "graduation-cap"
         },
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "href": "https://discord.com/invite/fortytwo",
+          "icon": "discord"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://mirror.xyz/fortytwonetwork.eth",
           "icon": "newspaper"
         }
       ]
@@ -90,38 +134,21 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://fortytwo.network/"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Run a node now",
+      "href": "https://tally.so/r/wQzVQk"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/fortytwonetwork",
+      "discord": "https://discord.com/invite/fortytwo",
+      "linkedin": "https://www.linkedin.com/company/fortytwonetwork/"
     }
   }
 }

@@ -1,0 +1,67 @@
+---
+title: "Wallet Migration"
+description: "When installing a new instance of the Fortytwo node, you may want to migrate your existing wallet to retain access to your previous identity and rewards. This guide explains how to safely transfer your wallet credentials (`.account_private_key` file) from an old node installation to a new one."
+---
+
+
+## Steps to Migrate Your Wallet
+
+<Steps>
+  <Step>
+   Locate your **old node installation folder**.
+  </Step>
+  <Step>
+    Inside it, open the `FortytwoNode` subfolder.
+  </Step>
+  <Step>
+    Copy the file named: `.account_private_key`
+  </Step>
+  <Step>
+    Go to your **new node installation folder**.
+  </Step>
+  <Step>
+    Create a subfolder named `FortytwoNode` if it doesn’t already exist.
+  </Step>
+  <Step>
+    Paste the copied `.account_private_key` file into the new `FortytwoNode` folder.
+  </Step>
+</Steps>
+
+<Check>
+  **Your new node will now use the same wallet as before. No reactivation or new wallet generation is required.**
+</Check>
+
+## Platform-Specific Notes
+
+### macOS
+
+Hidden files like `.account_private_key` are not shown by default in Finder. To reveal them:
+
+* Open the folder in Finder.
+* Press `Command + Shift + .` to toggle hidden file visibility.
+* Once you're done copying, press the same keys again to hide hidden files.
+
+### Windows
+
+To view hidden files in File Explorer:
+
+<Steps>
+  <Step>
+    Open **File Explorer**.
+  </Step>
+  <Step>
+    Select the **View** tab from the top menu.
+  </Step>
+  <Step>
+    Click **Show** → **Hidden items**.
+  </Step>
+  <Step>
+    Hidden files and folders (including `.account_private_key`) will now be visible.
+  </Step>
+</Steps>
+
+## Important
+
+* Do **not** share or expose your `.account_private_key` file. It grants full access to your wallet.
+* Ensure that the copied file is placed **exactly** in the `FortytwoNode` subfolder of your new node installation directory.
+* If you are operating nodes on multiple devices, each must use a **separate wallet** with its **own unique seed phrase** and `.account_private_key` file.
