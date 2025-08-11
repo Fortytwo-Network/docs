@@ -53,7 +53,8 @@
                 "pages": [
                   "docs/quick-start",
                   "docs/hardware-requirements",
-                  "docs/wallet-migration"
+                  "docs/wallet-migration",
+				  "docs/faq"
                 ]
               }
             ]
