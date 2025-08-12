@@ -3,7 +3,6 @@ title: "Changelog"
 ---
 
 <Update label="2025-08-05" description="[PROTOCOL:0.10.0]" tags={["Improved"]}>
-*Startup timeout (180s) to prevent hangs during initialization.*
 
 ### Added
 - Startup timeout (180s) to prevent hangs during initialization.
@@ -23,7 +22,6 @@ title: "Changelog"
 </Update>
 
 <Update label="2025-08-04" description="[CAPSULE:0.2.0]" tags={["Improved"]}>
-*Added health check to api*
 
 ### Added
 - Added health check to api
@@ -38,7 +36,6 @@ title: "Changelog"
 <Update label="2025-07-16" description="[CAPSULE:0.1.34]" tags={["Improved"]}>
 *Improved offline support and startup observability for capsule workers.*
 
-  offline support and startup observability for capsule workers.
 ### Added
 - Offline mode support for using locally cached models.
 - Notification system to confirm successful worker initialization before warm-up.
@@ -52,7 +49,6 @@ title: "Changelog"
 <Update label="2025-07-16" description="[PROTOCOL:0.9.0]" tags={["Improved"]}>
 *Improved chain sync robustness and streamlined network module logic.*
 
-  chain sync robustness and streamlined network module logic.
 ### Added
 - Async block gap processing to detect and fill missing blockchain data automatically.
 - Minor stability improvements for consensus submissions.
@@ -62,7 +58,7 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-07-10" description="[PROTOCOL:0.8.4]" tags={["Improved"]}>
+<Update label="2025-07-10" description="[PROTOCOL:0.8.4]" tags={["Fixed"]}>
 *Corrected label assignments in the inference metrics output.*
 
 
@@ -71,10 +67,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-07-09" description="[PROTOCOL:0.8.3]" tags={["Improved"]}>
+<Update label="2025-07-09" description="[PROTOCOL:0.8.3]" tags={["Added"]}>
 *Enhanced observability, RPC efficiency, and improved compatibility for CLI/GUI workflows.*
 
-- Enhanced observability, RPC efficiency, and improved compatibility for CLI/GUI workflows.
 ### Added
 - Protocol exit codes for improved error signaling.
 - Optimized RPC by implementing raw block polling with bloom filter pre-checks to reduce event overhead.
@@ -92,10 +87,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-07-03" description="[CAPSULE:0.1.33]" tags={["Improved"]}>
+<Update label="2025-07-03" description="[CAPSULE:0.1.33]" tags={["Added"]}>
 *Improved process management with graceful shutdown and defined exit codes.*
 
-  process management with graceful shutdown and defined exit codes.
 ### Added
 - Graceful shutdown handling for clean termination.
 - Defined exit codes for clearer process state signaling and bug reporting.
@@ -103,10 +97,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-07-02" description="[CAPSULE:0.1.32]" tags={["Improved"]}>
+<Update label="2025-07-02" description="[CAPSULE:0.1.32]" tags={["Added"]}>
 *Introduced web crawling support and updated Python worker behavior.*
 
-- Introduced web crawling support and updated Python worker behavior.
 ### Added
 - Web crawler integration.
 
@@ -116,10 +109,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-07-01" description="[PROTOCOL:0.8.2]" tags={["Improved"]}>
+<Update label="2025-07-01" description="[PROTOCOL:0.8.2]" tags={["Added"]}>
 *Introduced robust failover, improved ranking, and overall improvements to networking stability*
 
-- Introduced robust failover, improved ranking, and overall improvements to networking stability
 ### Added
 - Implemented polling-based staggered submission for inference resolutions with position-based delays.
 - Added initial version of new ranking algorithm.
@@ -137,7 +129,6 @@ title: "Changelog"
 <Update label="2025-06-25" description="[CAPSULE:0.1.31]" tags={["Improved"]}>
 *Dependency upgrade for improved compatibility and performance.*
 
-- Dependency upgrade for improved compatibility and performance.
 
 ### Changed
 - Updated core dependencies: llama.cpp and ft-tools.
@@ -145,10 +136,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-06-24" description="[PROTOCOL:0.8.1]" tags={["Improved"]}>
+<Update label="2025-06-24" description="[PROTOCOL:0.8.1]" tags={["Added"]}>
 *Improved transaction reliability and deadline handling through buffer tuning and multi-bootstrap support.*
 
-  transaction reliability and deadline handling through buffer tuning and multi-bootstrap support.
 ### Added
 - Introduced support for multiple bootstrap nodes to improve peer connectivity.
 
@@ -161,7 +151,6 @@ title: "Changelog"
 <Update label="2025-06-12" description="[PROTOCOL:0.8.0]" tags={["Improved"]}>
 *Major networking upgrade with peer discovery, sync improvements, and cleanup of blockchain and log systems.*
 
-- Major networking upgrade with peer discovery, sync improvements, and cleanup of blockchain and log systems.
 ### Added
 - Introduced /metrics endpoint for Prometheus-based performance analysis.
 - Enabled new peer discovery method during node initialization.
@@ -185,7 +174,6 @@ title: "Changelog"
 <Update label="2025-05-22" description="[PROTOCOL:0.6.0]" tags={["Improved"]}>
 *Introduced new peer discovery method and startup synchronization with major networking and blockchain module updates.*
 
-- Introduced new peer discovery method and startup synchronization with major networking and blockchain module updates.
 ### Added
 - Integrated Kademlia protocol for peer discovery during initialization.
 - Implemented node startup synchronization to ensure readiness.
@@ -202,10 +190,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-05-20" description="[CAPSULE:0.1.27]" tags={["Improved"]}>
+<Update label="2025-05-20" description="[CAPSULE:0.1.27]" tags={["Fixed"]}>
 *Fixed warm-up logic to improve LLM readiness at startup.*
 
-- Fixed warm-up logic to improve LLM readiness at startup.
 
 ### Fixed
 - Resolved issues with LLM warm-up during capsule initialization.
@@ -217,7 +204,6 @@ title: "Changelog"
 <Update label="2025-05-14" description="[CAPSULE:0.1.26]" tags={["Improved"]}>
 *Improved development observability.*
 
-  development observability.
 
 ### Changed
 - Added additional logs for development and debugging purposes.
@@ -229,7 +215,6 @@ title: "Changelog"
 <Update label="2025-05-12" description="[CAPSULE:0.1.25]" tags={["Improved"]}>
 *Switched default tokenizer configuration.*
 
-- Switched default tokenizer configuration.
 
 ### Changed
 - Changed default tokenizer used for completions.
@@ -237,10 +222,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-05-12" description="[PROTOCOL:0.5.4]" tags={["Improved"]}>
+<Update label="2025-05-12" description="[PROTOCOL:0.5.4]" tags={["Added"]}>
 *Added request sizing parameter to capsule completions.*
 
-- Added request sizing parameter to capsule completions.
 ### Added
 - Included max_size parameter in the completions request to the capsule for better input control.
 
@@ -263,7 +247,6 @@ title: "Changelog"
 <Update label="2025-05-07" description="[CAPSULE:0.1.23]" tags={["Improved"]}>
 *Increased reserved memory to improve runtime reliability.*
 
-- Increased reserved memory to improve runtime reliability.
 
 ### Changed
 - Increased default reserved memory allocation.
@@ -275,17 +258,15 @@ title: "Changelog"
 <Update label="2025-05-07" description="[PROTOCOL:0.5.3]" tags={["Improved"]}>
 *Added request size cap to prevent overload in devs request.*
 
-- Added request size cap to prevent overload in devs request.
 ### Added
 - max_size field to the /devs request for controlled query sizing.
 
 
 </Update>
 
-<Update label="2025-05-07" description="[CAPSULE:0.1.22]" tags={["Improved"]}>
+<Update label="2025-05-07" description="[CAPSULE:0.1.22]" tags={["Added"]}>
 *Major performance and capability upgrade including dynamic context, GPU offloading, and embeddings truncation.*
 
-- Major performance and capability upgrade including dynamic context, GPU offloading, and embeddings truncation.
 ### Added
 - Embedding truncation for improved memory efficiency.
 - Support for using the model's maximum context size.
@@ -303,10 +284,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-05-01" description="[PROTOCOL:0.5.2]" tags={["Improved"]}>
+<Update label="2025-05-01" description="[PROTOCOL:0.5.2]" tags={["Fixed"]}>
 *Made tokenizer ID optional in developer-facing requests.*
 
-- Made tokenizer ID optional in developer-facing requests.
 
 ### Fixed
 - Tokenizer_id in /devs request is now optional, improving support for lightweight queries.
@@ -314,10 +294,8 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-05-01" description="[PROTOCOL:0.5.1]" tags={["Improved"]}>
+<Update label="2025-05-01" description="[PROTOCOL:0.5.1]" tags={["Fixed"]}>
 *Improved handling for empty tokenizer values in intents.*
-
-  handling for empty tokenizer values in intents.
 
 ### Fixed
 - Correctly handles empty tokenizer cases in submitted intents.
@@ -325,10 +303,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-04-30" description="[PROTOCOL:0.5.0]" tags={["Improved"]}>
+<Update label="2025-04-30" description="[PROTOCOL:0.5.0]" tags={["Added"]}>
 *Major feature release with metadata access, performance estimation, new ranking strategies, and node load balancing.*
 
-- Major feature release with metadata access, performance estimation, new ranking strategies, and node load balancing.
 ### Added
 - GET /metadata endpoint for capsules to fetch version, token limits, and tokenizer info.
 - Participation now estimates performance limits from capsule metadata.
@@ -339,10 +316,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-04-30" description="[CAPSULE:0.1.21]" tags={["Improved"]}>
+<Update label="2025-04-30" description="[CAPSULE:0.1.21]" tags={["Added"]}>
 *Added support for Qwen3 ARC model and updated dev dependencies.*
 
-- Added support for Qwen3 ARC model and updated dev dependencies.
 ### Added
 - Added Qwen3 model support.
 
@@ -352,10 +328,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-04-11" description="[CAPSULE:0.1.20]" tags={["Improved"]}>
+<Update label="2025-04-11" description="[CAPSULE:0.1.20]" tags={["Fixed"]}>
 *Improved system prompt and added error handling for model outputs.*
 
-  system prompt and added error handling for model outputs.
 
 ### Changed
 - Added handling for empty model output in get_completions response.
@@ -364,10 +339,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-04-11" description="[CAPSULE:0.1.19]" tags={["Improved"]}>
+<Update label="2025-04-11" description="[CAPSULE:0.1.19]" tags={["Fixed"]}>
 *Disabled Python execution and introduced structured inputs for participation logic.*
 
-- Disabled Python execution and introduced structured inputs for participation logic.
 
 ### Changed
 - Temporarily disabled Python interpreter.
@@ -381,7 +355,6 @@ title: "Changelog"
 <Update label="2025-04-10" description="[PROTOCOL:0.4.0]" tags={["Improved"]}>
 *Improved token handling and pre-checks before participation.*
 
-  token handling and pre-checks before participation.
 ### Added
 - Node balance validation before joining a round.
 - Auto-approval of 42T token allowance for smoother participation.
@@ -389,10 +362,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-04-10" description="[CAPSULE:0.1.18]" tags={["Improved"]}>
+<Update label="2025-04-10" description="[CAPSULE:0.1.18]" tags={["Added"]}>
 *Introduced new ranking endpoint and support for structured input.*
 
-- Introduced new ranking endpoint and support for structured input.
 ### Added
 - New /v2/ranking API endpoint.
 - Support for structured input objects.
@@ -402,10 +374,9 @@ title: "Changelog"
  
 </Update>
 
-<Update label="2025-04-09" description="[CAPSULE:0.1.17]" tags={["Improved"]}>
+<Update label="2025-04-09" description="[CAPSULE:0.1.17]" tags={["Addedd"]}>
 *Introduced a new metadata endpoint and transitioned to mpsc-based streaming.*
 
-- Introduced a new metadata endpoint and transitioned to mpsc-based streaming.
 ### Added
 - /metadata endpoint for diagnostics and external tooling.
 
@@ -415,10 +386,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-04-08" description="[CAPSULE:0.1.16]" tags={["Improved"]}>
+<Update label="2025-04-08" description="[CAPSULE:0.1.16]" tags={["Added"]}>
 *Extended capabilities with web search, Python execution.*
 
-- Extended capabilities with web search, Python execution.
 ### Added
 - Brave API integration for web search.
 - Python execution support.
@@ -433,7 +403,6 @@ title: "Changelog"
 <Update label="2025-04-07" description="[PROTOCOL:0.3.2]" tags={["Improved"]}>
 *Adjusted participation logic and timing for better request flow.*
 
-- Adjusted participation logic and timing for better request flow.
 
 ### Changed
 - Increased max duration for inference join attempts.
@@ -446,7 +415,6 @@ title: "Changelog"
 <Update label="2025-04-04" description="[PROTOCOL:0.3.1]" tags={["Improved"]}>
 *Improved gas efficiency and fixed retry logic.*
 
-- Gas efficiency and fixed retry logic.
 
 ### Fixed
 - Patched retry logic covering blockchain context, balances, token approvals, and intent resolution.
@@ -461,7 +429,6 @@ title: "Changelog"
 <Update label="2025-04-04" description="[CAPSULE:0.1.15]" tags={["Improved"]}>
 *Performance improvements, private crate support, and prompt tuning.*
 
-- Performance improvements, private crate support, and prompt tuning.
 ### Added
 - Support for custom private Rust crates.
 - Token generation speed: 97.63% parity with llama.cpp.
@@ -480,7 +447,6 @@ title: "Changelog"
 <Update label="2025-04-02" description="[PROTOCOL:0.3.0]" tags={["Improved"]}>
 *Introduced off-chain consensus and automated infrastructure upgrades.*
 
-- Introduced off-chain consensus and automated infrastructure upgrades.
 ### Added
 - Off-chain consensus layer via P2P.
 - Automated deployment pipeline for new releases.
@@ -495,8 +461,6 @@ title: "Changelog"
 <Update label="2025-03-24" description="[CAPSULE:0.1.14]" tags={["Improved"]}>
 *Internal refactor with focus on stability and efficiency.*
 
-- Internal refactor with focus on stability and efficiency.
-
 ### Changed
 - Code refactor for maintainability.
 
@@ -507,10 +471,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-03-20" description="[CAPSULE:0.1.13]" tags={["Improved"]}>
+<Update label="2025-03-20" description="[CAPSULE:0.1.13]" tags={["Added"]}>
 *Feature update with a new embeddings model, flash attention and improved ranking capabilities.*
 
-- Feature update with a new embeddings model, flash attention and improved ranking capabilities.
 ### Added
 - New embeddings model.
 - Flash attention for faster processing.
@@ -527,10 +490,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-03-19" description="[CAPSULE:0.1.12]" tags={["Improved"]}>
+<Update label="2025-03-19" description="[CAPSULE:0.1.12]" tags={["Added"]}>
 *Enabled model upload cache configuration*
 
-- Enabled model upload cache configuration
 ### Added
 - Configurable cache location for uploaded models.
  
@@ -548,10 +510,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-03-13" description="[PROTOCOL:0.2.2]" tags={["Improved"]}>
+<Update label="2025-03-13" description="[PROTOCOL:0.2.2]" tags={["Fixed"]}>
 *Temporary gas optimizations and threading fix.*
 
-- Temporary gas optimizations and threading fix.
 
 ### Changed
 - Reduced MAX_PARTICIPATION_AMOUNT from 12 to 7 to lower gas costs.
@@ -565,16 +526,14 @@ title: "Changelog"
 <Update label="2025-03-12" description="[PROTOCOL:0.2.1]" tags={["Improved"]}>
 *Minor runtime adjustment to stabilize startup.*
 
-- Minor runtime adjustment to stabilize startup.
 ### Added
 - Added delay before initializing BlockchainBridge.
 
 </Update>
 
-<Update label="2025-03-12" description="[PROTOCOL:0.2.0]" tags={["Improved"]}>
+<Update label="2025-03-12" description="[PROTOCOL:0.2.0]" tags={["Added"]}>
 *Major enhancements to blockchain integration, formatting, and dependencies.*
 
-- Major enhancements to blockchain integration, formatting, and dependencies.
 ### Added
 - Retry logic for blockchain sync, balances, approvals, and intents via retry_on_error!.
 - New u256_frac_mul! macro for precise U256 math.
@@ -589,10 +548,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-03-11" description="[PROTOCOL:0.1.33]" tags={["Improved"]}>
+<Update label="2025-03-11" description="[PROTOCOL:0.1.33]" tags={["Fixed"]}>
 *Ranking module hotfix*
 
-- Ranking module hotfix
 
 ### Fixed
 - Optimized mathematical functions in the ranking module.
@@ -600,10 +558,9 @@ title: "Changelog"
 
 </Update>
 
-<Update label="2025-03-10" description="[PROTOCOL:0.1.32]" tags={["Improved"]}>
+<Update label="2025-03-10" description="[PROTOCOL:0.1.32]" tags={["Fixed"]}>
 *Improved swarm stability, fixed reconnection and ranking issues, and enhanced logging.*
 
-  swarm stability, fixed reconnection and ranking issues, and enhanced logging.
 ### Added
 - Implemented forced exit on swarm disconnection to improve network stability.
 
