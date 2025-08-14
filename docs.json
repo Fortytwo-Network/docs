@@ -56,6 +56,12 @@
                   "docs/wallet-migration",
 				  "docs/faq"
                 ]
+              },
+			  {
+                "group": "Research",
+                "pages": [
+                  "docs/papers"
+                ]
               }
             ]
           },
